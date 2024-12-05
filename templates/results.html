@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header class="sticky-header">
+        <div class="header-container">
+            <form action="/results" method="post" class="search-form">
+                <input type="text" id="query" name="query" placeholder="Search FAQs..." value="{{ query }}" required>
+                <button type="submit">Search</button>
+                
+                <select id="model" name="model" required>
+                    <option value="boolean" {% if model == 'boolean' %}selected{% endif %}>Boolean</option>
+                    <option value="extended_boolean" {% if model == 'extended_boolean' %}selected{% endif %}>Extended Boolean</option>
+                    <option value="vector" {% if model == 'vector' %}selected{% endif %}>Vector</option>
+                </select>
+                
+                <select id="language" name="language" required>
+                    <option value="en" {% if language == 'en' %}selected{% endif %}>English</option>
+                    <option value="ar" {% if language == 'ar' %}selected{% endif %}>Arabic</option>
+                    <!-- Add more languages as needed -->
+                </select>
+                <a href="/"><img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo-result"></a>
+            </form>
+        </div>
+    </header>
+    
+    <div class="container-result">
+        <div class="card-container">
+            {% for question, answer in results %}
+            <div class="result-item">
+                <h2>{{ question }}</h2>
+                <p>{{ answer }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

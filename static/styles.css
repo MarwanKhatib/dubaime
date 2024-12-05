@@ -1,0 +1,176 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111111;
+    margin: 0;
+    flex-direction: column;
+    min-height: 30vh;
+}
+
+.search-bar{
+    display: block;
+    margin: auto ;
+    background-color: #00000000;
+    color : #ffffff;
+    width: 400px !important ;
+    padding: 10px ;
+    font-size: 16px;
+    border: 2px solid #7c7c7c !important;
+    border-radius: 10px !important;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.container {
+    text-align: center;
+}
+
+.logo {
+    margin-top: 200px;
+    max-width: 500px;
+    margin-bottom: 50px;
+}
+
+.logo-result {
+    margin-left: 600px;
+    max-width: 200px;
+    margin-top: 5px;
+}
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #c7c7c7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: not-allowed;
+}
+
+button:enabled {
+    cursor: pointer;
+    background-color: #08adb8;
+}
+
+.radio-group {
+    margin: 20px 0;
+}
+
+.lch {
+    border-radius: 10px 0px 0px 10px ;
+}
+
+.rch {
+    border-radius: 0px 10px 10px 0px ;
+}
+
+.radio-group input[type="radio"] {
+    display: none;
+}
+
+.radio-group label {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #343434;
+    color: #848484;
+    margin-left: -5px;
+    margin-right: -5px;
+    cursor: pointer;
+}
+
+
+
+.radio-group input[type="radio"]:checked + label {
+    background-color: #ffffff;
+    color: #08adb8;
+}
+
+.btn{
+    display: block;
+    width: 200px ;
+    margin : auto;
+}
+
+.sticky-header {
+    width: 100%;
+    padding: 20px;
+    position: sticky;
+    top: 0px;
+    background-color: #111111;
+    z-index: 1000;
+}
+
+.header-container {
+    padding: 10px;
+    display: flex;
+    margin-left: 30px;
+    align-items: center;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-form input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #08adb8;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.search-form select {
+    margin: 0 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.container-result {
+    width: 95%;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.card-container {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.result-item {
+    color:#ffffff;
+    background-color: rgba(255, 255, 255, 0.027);
+    border-radius: 8px;
+    margin: 10px 0;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.result-item h2 {
+    margin-top: 0;
+}
+
+.result-item p {
+    margin: 10px 0 0;
+}

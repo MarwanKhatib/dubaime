@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Page</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <p style = "color : #fff" >Team : Maysan_153495 , Fatima_146047 ,  Nour_173661 , Yaman_167323</p>
+    <div class="container">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+        <form action="/results" method="post">
+            <div class="radio-group">
+                <input type="radio" id="boolean" name="model" value="boolean" checked >
+                <label for="boolean" , class = 'lch' >Boolean</label>
+                <input type="radio" id="extended_boolean" name="model" value="extended_boolean">
+                <label for="extended_boolean">Extended Boolean</label>
+                <input type="radio" id="vector" name="model" value="vector">
+                <label for="vector" class = 'rch'>Vector</label>
+            </div>
+            <div class="radio-group" style = "margin-top:30px;">
+                <input type="radio" id="en" name="language" value="en" checked>
+                <label for="en" , class = 'lch'>English</label>
+                <input type="radio" id="ar" name="language" value="ar">
+                <label for="ar" , class ="rch">Arabic</label>
+            </div>
+            <input type="text" id="query" name="query" placeholder="Looking for Something?" required , class = "search-bar">
+            <button type="submit" id="search-button" disabled , class= "btn">Search</button>
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
